@@ -1,0 +1,6 @@
+gyp http GET http://nodejs.org/dist/v0.10.27/node-v0.10.27.tar.gz
+gyp http 200 http://nodejs.org/dist/v0.10.27/node-v0.10.27.tar.gz
+gyp http GET http://nodejs.org/dist/v0.10.27/SHASUMS.txt
+gyp http GET http://nodejs.org/dist/v0.10.27/SHASUMS.txt
+gyp http 200 http://nodejs.org/dist/v0.10.27/SHASUMS.txt
+gyp http 200 http://nodejs.org/dist/v0.10.27/SHASUMS.txt
