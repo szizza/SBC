@@ -1,19 +1,34 @@
+!SESSION 2014-10-28 23:53:27.080 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/szizza/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/szizza/.eclipse_keyring -showlocation
 
-!ENTRY org.eclipse.ui.ide 4 4 2014-10-24 01:05:14.913
-!MESSAGE Problems saving workspace
+!ENTRY org.eclipse.core.net 1 0 2014-10-28 23:53:30.808
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
 
-!ENTRY org.eclipse.ui.ide 4 1 2014-10-24 01:05:14.914
-!MESSAGE Problems occurred while trying to save the state of the workbench.
-!SUBENTRY 1 org.eclipse.core.resources 4 568 2014-10-24 01:05:14.914
-!MESSAGE Could not write workspace metadata '/Users/szizza/Development/mobile/SBC/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree'.
-!STACK 0
-java.io.FileNotFoundException: /Users/szizza/Development/mobile/SBC/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree (No such file or directory)
-	at java.io.FileOutputStream.open(Native Method)
-	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
-	at java.io.FileOutputStream.<init>(FileOutputStream.java:171)
-	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
-	at org.eclipse.core.internal.resources.SaveManager.saveTree(SaveManager.java:1352)
-	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1134)
-	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2376)
-	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:508)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!ENTRY org.eclipse.jface 2 0 2014-10-28 23:53:31.113
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-10-28 23:53:31.113
+!MESSAGE A conflict occurred for ALT+COMMAND+C:
+Binding(ALT+COMMAND+C,
+	ParameterizedCommand(Command(de.bastiankrol.startexplorer.copyResourcePathToClipboardFromResourceView,Copy Resource Path to Clipboard,
+		Copies the path of the resource to the clipboard,
+		Category(de.bastiankrol.startexplorer.commands.category,StartExplorer,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4f4dc135,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+C,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.modify.method.parameters,Change Method Signature,
+		Change method signature includes parameter names and parameter order,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79c7a73f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.ui 4 4 2014-10-28 23:53:33.246
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.TaskList.
