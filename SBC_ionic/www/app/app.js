@@ -117,11 +117,11 @@ angular.module("SBCApp",["ionic"])
 			}			
 		})
 
-		.state('app.sportslanding', {			
-			url : "/sportslanding",
+		.state('app.sports', {			
+			url : "/sports",
 			views: {
 				"mainContent" : {
-					templateUrl: "app/sportslanding/sportslanding.html"
+					templateUrl: "app/sportslanding/sports.html"
 				}
 			}			
 		});
