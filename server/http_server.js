@@ -30,6 +30,119 @@ var restdata = require("./lib/rest.data.container");
 
 settings.readCommandLine();
 
+/*REDIS TEST*/
+var redis = require("/usr/local/lib/node_modules/redis"),
+client = redis.createClient();
+
+// if you'd like to select database 3, instead of 0 (default), call
+// client.select(3, function() { /* ... */ });
+
+client.on("error", function (err) {
+		console.log("Error " + err);
+	});
+
+
+/*REDIS TEST*/
+
+/*this is a utility function that needs to go into a central library - js*/
+function isValidData(variable)
+{
+	console.log(variable);
+	if(!variable)
+	{
+		return false; 
+		
+	}
+	else 
+	{	return true;
+		
+	}
+}
+function createuser (pathc, data, res)
+{
+	
+	try
+	{
+			if(isValidData(data))
+			{
+			
+				
+						
+			}
+			else
+			{
+				res.writeHead(404, {'Content-Type': 'text'});
+			    res.end('...', "utf-8");
+				
+			}
+		
+	}
+	catch(err)
+	{
+		console.log("Failed to create user "  + err + " was returned.");
+		res.writeHead(404, {'Content-Type': 'text'});
+	    res.end('...', "utf-8");
+
+	}
+	
+}
+
+
+function authenticate (pathc, data, res)
+{
+	
+	try
+	{
+			if(data)
+			{
+			
+				
+			    if(data.username && data.password)
+			    {
+			       		var username = data.username.replace(/\n|\r\n|\r/g, "");
+					    client.get(username, function(err, value){
+					    	
+					    	var password = data.password.replace(/\n|\r\n|\r/g, "");
+					    	var userinfo = JSON.parse(value);
+					    	if(userinfo && userinfo.password == password)
+					    	{
+					    		
+					    		console.log(password + ' ' + userinfo.password);
+								res.writeHead(200, {'Content-Type': 'application/json'});
+								res.end(value, "utf-8");
+					    		
+					    	}
+					    	else
+					    	{
+					    		res.writeHead(404, {'Content-Type': 'text'});
+							    res.end('user not found or the password is incorrect', "utf-8");
+					    		
+					    	}
+				    });
+			    	
+			    }
+				
+			}
+			else
+			{
+				res.writeHead(404, {'Content-Type': 'text'});
+			    res.end('...', "utf-8");
+				
+			}
+		
+	}
+	catch(err)
+	{
+		console.log("Failed to authenticate user "  + err + " was returned.");
+		res.writeHead(404, {'Content-Type': 'text'});
+	    res.end('...', "utf-8");
+
+	}
+	
+}
+
+routemgr.setRoute('/rest/rpc/authenticate', authenticate);
+routemgr.setRoute('/rest/rpc/createuser', createuser);
 
 try
 {
@@ -80,6 +193,7 @@ function handleGetDiskFile(uri, res)
 			break;
 		case '.jpg':
 			contentType = "img/jpg";
+			
 			break;
 		case '.png':
 			contentType = "img/png"; 
@@ -140,12 +254,10 @@ function handlePost(uri,data, res)
 {
 	var handled = false;
 	console.log('handle post called....');
-	if(!handled)
-	{
-		var parsedurl = url.parse(uri, true);
-		handled  = routemgr.executeRoute(parsedurl.path, data, res);
-		
-	}
+	var parsedurl = url.parse(uri, true);
+	handled  = routemgr.executeRoute(parsedurl.path, data, res);
+	console.log('handle post ended....' + parsedurl.path + ' ' + data);
+	
 	return handled;
 	
 	
