@@ -1,0 +1,122 @@
+<ion-side-menus>
+
+	<ion-pane ion-side-menu-content>
+
+		<!-- <ion-nav-bar class="bar-stable bar-dark bar-header nav-title-slide-ios7">
+
+		
+
+		
+		 <ion-nav-back-button class="button-clear button-icon icon ion-ios7-arrow-back"> 
+		 	Back </ion-nav-back-button>
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"> </button>
+
+			
+
+
+
+		</ion-nav-bar> -->
+
+	<div class="bar bar-header bar-dark">
+	  <h1 class="title"></h1>
+	  <div class="row">
+	  			<div class="col col-5 col-center"> 
+	  				<button class="button button-icon icon ion-navicon"></button>
+	  				
+	  			</div>	
+			  	<div class="col col-center"><h6 class="stable">John Doe</h6> </div>			  	
+			  	<div class="col">
+			  		<div class="title">Title</div>
+			  	</div>
+
+			  	<div class="col col-center"><h6 class="balanced"> Bal:$225.00 </h6></div>
+	   </div>
+
+
+
+	</div>
+	
+	<div class="bar bar-footer">
+  		<ion-tabs class="tabs-dark tabs-icon-top">
+
+			  <ion-tab title="Sports" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="app.sportslanding" >
+			    <!-- Tab 1 content -->
+			  </ion-tab>
+
+			  <ion-tab title="Account" icon-on="ion-ios7-clock" icon-off="ion-ios7-clock-outline" ui-sref="app.account" >
+			    <!-- Tab 2 content -->
+			  </ion-tab>
+
+			  <ion-tab title="Settings" icon-on="ion-ios7-gear" icon-off="ion-ios7-gear-outline" ui-sref="app.settings" >
+			    <!-- Tab 3 content -->
+			   </ion-tab>
+
+			   <ion-tab title="History" icon-on="ion-ios7-gear" icon-off="ion-ios7-gear-outline" ui-sref="app.history" >
+			    <!-- Tab 4 content -->
+			   </ion-tab>
+
+
+	    </ion-tabs>
+
+	</div>
+
+
+
+
+		<ion-nav-view name="mainContent" animation = "slide-left-right">
+		
+			<!--Inject child views-->	
+		
+		</ion-nav-view>
+
+
+
+		
+	</ion-pane>
+
+	<ion-side-menu side="left">
+	<!-- <header class="bar bar-header bar-dark">
+		<h1 class="title">SBC</h1>
+	</header> -->
+
+
+	<div class="bar bar-header bar-dark">
+	  <h1 class="title">SBC</h1>
+	  <!-- <div class="row">
+			  	<div class="col"> Welcome John Doe </div>
+			  	<div class="col"> Balance : $225.00</div>
+	 </div> -->
+
+	</div>
+	<div class="bar bar-subheader">
+  		<h2 class="title"></h2>
+	</div>
+	<div class="bar bar-footer bar-dark">
+  		<button class="button button-clear pull-right"></button>
+	</div>
+
+	  <!-- <div class="row">
+	  	<div class="col"> Welcome John Doe </div>
+	  	<div class="col"> Balance : $225.00</div>
+	  </div> -->
+	
+
+	<ion-content class="has-header has-subheader has-footer">
+		<ion-list>
+			
+			<ion-item nav-clear menu-close ui-sref="app.about" >About</ion-item>
+			<ion-item nav-clear menu-close ui-sref="app.login" >Login</ion-item>
+			<ion-item nav-clear menu-close ui-sref="app.account" >Account</ion-item>			
+			<ion-item nav-clear menu-close ui-sref="app.history" >History</ion-item>
+			<ion-item nav-clear menu-close ui-sref="app.lines" >Lines</ion-item>
+			<ion-item nav-clear menu-close ui-sref="app.accountsummary" >Account Summary</ion-item>
+			<ion-item nav-clear menu-close ui-sref="app.msgcenter" >Msg center</ion-item>
+			<ion-item nav-clear menu-close ui-sref="app.settings" >Settings</ion-item>
+			<ion-item nav-clear menu-close ui-sref="app.sportslanding" >Sports</ion-item>
+
+
+		</ion-list>
+
+	</ion-side-menu>
+
+</ion-side-menus>

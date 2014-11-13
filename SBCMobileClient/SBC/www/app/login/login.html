@@ -1,0 +1,33 @@
+<ion-view title="Login" ng-controller="loginCtrl as vm">
+	<ion-content class="has-header">
+
+							
+			  	<div style="height:100px; width:90%; position:relative; margin-left:5%; mrigin-right:5%"> 
+			  		<div style="height:100px"><img style="display:block; margin-top:20px; margin-left:auto; margin-right:auto" src="/img/sbc-logo.png"> </img> </div> 
+			  		
+						<label class="item item-input">
+						  <span class="input-label" >username</span>
+						  <input type="text" ng-model="userinfo.username">
+					</label>
+					
+					<label class="item item-input">
+						  <span class="input-label" >password</span>
+						  <input type="password" ng-model="userinfo.password">
+					</label>
+	
+					<li class="item item-toggle">
+				     Remember me <b>{{userinfo.remember ? "yes" : "no"}}</b>
+				     <label class="toggle toggle-positive">
+				       <input type="checkbox" ng-model="userinfo.remember">
+				       <div class="track">
+				         <div class="handle"></div>
+				       </div>
+				     </label>
+				  	</li>
+			  		<!-- <a href="#" class="linkbutton large green arial">Login</a> -->	
+			  		<button class="button button-full button-balanced" ng-click="authenticate()">Login</button>
+			  		<div style="height:100px">Enter your username & password to continue.</div> 
+			  	</div>
+			  	
+			</ion-content>
+</ion-view>
