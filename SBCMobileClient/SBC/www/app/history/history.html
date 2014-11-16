@@ -1,6 +1,76 @@
 <ion-view title="History" ng-controller="historyCtrl as vm">
 	<ion-content class="has-header">
-	<h1> History </h1>
+	
+	<ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.loadList(true)">
+	</ion-refresher>
+
+		<div class="list item-divider" >
+			<div class="row">
+					<div class="col col-center">
+						<p>Date</p>
+					</div>
+					<div class="col col-center">
+						<p>Book</p>
+					</div>
+					<div class="col col-center">
+						<p>Wager</p>
+					</div>
+					<div class="col col-center">
+						<p>Amt</p>
+					</div>
+					<div class="col col-center">
+						<p>Outcome</p>
+					</div>
+					<div class="col col-center">
+						<p>Wins</p>
+					</div>
+			</div>
+		</div>
+
+
+
+	<div class="list" >
+			<div  ng-repeat="item in vm.WagersHistory">				
+
+				
+
+				<div class="row">
+					<div class="col col-center ">
+						<p>{{item.date}}</p>
+					</div>
+					<div class="col col-center">											
+						<p>{{item.book}}</p>
+					</div>
+
+					<div class="col col-center">
+						<p>{{item.wager}}</p>
+					</div>				
+
+					<div class="col col-center">											
+						<p>{{item.amount}}</p>
+					</div>
+					<div class="col col-center">											
+						<p>{{item.outcome}}</p>
+					</div>
+					<div class="col col-center">											
+						<p>{{item.winnings}}</p>
+					</div>
+
+				</div>
+
+			
+			</div>
+		</div>
+
+
+	<div>
+		<button class="button button-wrap button-balanced" 
+			data-ng-click="vm.LoadMoreWagers()">Load More Wagers</button>	
+		<br/>
+		<br/>
+
+	</div>		
+
 
 
 	</ion-content>

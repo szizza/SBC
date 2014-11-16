@@ -6,8 +6,20 @@
 
 		function aboutCtrl($ionicPopup,sbcservice) {
 			var vm = this;	
-			var data = sbcservice.getData();	
-			vm.detail = data;
+			// var vm.AppTitle = "Sports Book Combine";
+			// var vm.AppVersion = "Version 0.0.1";
+			// var vm.ContactInfoemail = "info@sbc.com";
+			// var vm.Contactwebsite = "http://www.sbcsports.com";
+
+			activate();
+
+			function activate(){
+				console.log('activated About control');
+				
+			}
+
+
+
 		};
 
 

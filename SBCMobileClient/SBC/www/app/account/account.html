@@ -1,7 +1,149 @@
 <ion-view title="Account" ng-controller="accountCtrl as vm">
-	<ion-content class="has-header">
-	<h1> Account </h1>
+<ion-content class="has-header dark">
+<div>
 
 
-	</ion-content>
+
+
+	<div class="row">
+		<div class="col col-center">				
+			<p> username </p>			
+		</div>
+		<div class="col">
+			<label class="item item-input">
+				<input type="text" placeholder="username" ng-model="vm.userinfo.username">
+			</label>	
+
+		</div>			
+	</div>
+
+	<div class="row">
+		<div class="col col-center">				
+			<p> Password </p>				
+		</div>
+		<div class="col">
+			<label class="item item-input">
+				<input type="text" placeholder="password" ng-model="vm.userinfo.Password">
+			</label>	
+
+		</div>			
+	</div>
+
+	<div class="row">
+		<div class="col col-center">				
+			<p> Confirm Password </p>				
+		</div>
+		<div class="col">
+			<label class="item item-input">
+				<input type="text" placeholder="password" ng-model="vm.userinfo.confrimPassword">
+			</label>	
+
+		</div>			
+	</div>
+
+	<div class="row">
+		<div class="col col-center">				
+			<p> Email Address </p>				
+		</div>
+		<div class="col">
+			<label class="item item-input">
+				<input type="text" placeholder="Email" ng-model="vm.userinfo.Email">
+			</label>	
+
+		</div>			
+	</div>
+
+	<div class="row">
+		<div class="col col-center">				
+			<p> Confirm Email </p>				
+		</div>
+		<div class="col">
+			<label class="item item-input">
+				<input type="text" placeholder="Email" ng-model="vm.userinfo.confirmEmail">
+			</label>	
+
+		</div>			
+	</div>
+
+	<div class="row">
+		<div class="col col-center">				
+			<p> Zipcode </p>				
+		</div>
+		<div class="col">
+			<label class="item item-input">
+				<input type="text" placeholder="Zipcode" ng-model="vm.userinfo.Zipcode">
+			</label>	
+
+		</div>			
+	</div>
+
+	<div class="row">
+		<div class="col col-center">				
+			<p> Security Question </p>				
+		</div>
+		<div class="col">
+			<label class="item item-input">
+				<input type="text" placeholder="Security Question" ng-model="vm.userinfo.Securityquestion">
+			</label>	
+
+		</div>			
+	</div>
+
+	<div class="row">
+		<div class="col col-center">				
+			<p> Answer </p>				
+		</div>
+		<div class="col">
+			<label class="item item-input">
+				<input type="text" placeholder="Answer" ng-model="vm.userinfo.SecurityAnswer">
+			</label>	
+
+		</div>			
+	</div>
+
+	<div class="row">
+		<div class="col col-center">					
+		<!-- <p>{{vm.userinfo.username}}</p> -->	
+
+
+		</div>
+		<div class="col ">	
+
+			<button class="button button-outline button-positive">
+				LePipe :)
+			</button>
+		</div>
+
+	</div>
+
+
+	<div class="row">
+		<div class="col col-center">				
+			<p> Enter the Character seen </p>				
+		</div>
+		<div class="col">
+			<label class="item item-input">
+				<input type="text" placeholder="character">
+			</label>			  	
+
+		</div>			
+	</div>
+
+</div>
+
+		
+	<div>
+		<button class="button button-wrap button-balanced" 
+			data-ng-click="vm.addAccountuserinfo()">Create Account</button>	
+		<br/>
+		<br/>
+
+	</div>				
+
+
+
+
+
+
+</ion-content>
 </ion-view>

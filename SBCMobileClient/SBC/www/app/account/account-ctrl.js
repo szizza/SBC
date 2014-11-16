@@ -6,8 +6,32 @@
 
 		function accountCtrl($ionicPopup,sbcservice) {
 			var vm = this;	
-			var data = sbcservice.getData();	
-			vm.detail = data;
+			vm.userinfo=[];
+			
+			vm.addAccountuserinfo=addAccountuserinfo;
+
+			activate();
+
+			function activate(){
+				console.log('activated Account control');
+				
+			}
+
+
+
+			function addAccountuserinfo(){
+				console.log('addAccountuserinfo clicked');
+				console.log(vm.userinfo);
+
+				return sbcservice.addnewUserAccount().then(function(data) {
+
+					console.log("Add New user account returned",data );
+                
+                
+            });
+
+
+			}
 		};
 
 
