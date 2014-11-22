@@ -8,6 +8,6 @@ app.controller("userlogin", function($scope, $http, authentication){
 	$scope.userinfo = {username : '', password : ''};
 	$scope.test = {username : '', password : ''};
 	
-	$scope.authenticate = function() {authentication.authenticate($scope.userinfo.username, $scope.userinfo.password, $scope.test); $scope.test.username = 'test';};
+	$scope.authenticate = function() {authentication.authenticate($scope.userinfo.username, $scope.userinfo.password); };
 	
 });
